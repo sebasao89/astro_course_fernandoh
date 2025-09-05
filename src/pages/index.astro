@@ -1,20 +1,13 @@
 ---
 import Navbar from "./components/navbar.astro"
+import MainLayout from "../Layouts/main.layout.astro"
 
 //SERVER ONLY
 const companyName = 'Salarcon Tech Solutions 1'
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Salarcon</title>
-	</head>
-	<body>
-        <Navbar />
-		<h1>{companyName}</h1>
-	</body>
-</html>
+<MainLayout title={companyName}>
+    <h1>{companyName}</h1>
+</MainLayout>
+
+
