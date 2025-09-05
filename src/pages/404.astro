@@ -1,0 +1,74 @@
+---
+import MainLayout from "../Layouts/main.layout.astro";
+---
+
+<MainLayout title="404 - Página no encontrada">
+	<main class="container-404">
+		<div class="number-404">404</div>
+		<h1>Esta página no existe</h1>
+		<p>Lo sentimos, la página que estás buscando no existe o ha sido movida.</p>
+		<a href="/">Volver al inicio</a>
+	</main>
+</MainLayout>
+
+<style>
+	.container-404 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 80vh;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.number-404 {
+		font-size: 8rem;
+		font-weight: bold;
+		color: #666;
+		margin-bottom: 1rem;
+		line-height: 1;
+		animation: float 3s ease-in-out infinite;
+	}
+
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0px);
+			opacity: 0.8;
+		}
+		50% {
+			transform: translateY(-10px);
+			opacity: 1;
+		}
+	}
+
+	h1 {
+		font-size: 2rem;
+		color: #333;
+		margin-bottom: 1rem;
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 1.2rem;
+		color: #666;
+		margin-bottom: 2rem;
+		max-width: 500px;
+		line-height: 1.5;
+	}
+
+	a {
+		background-color: #333;
+		color: white;
+		padding: 12px 24px;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 500;
+		transition: background-color 0.3s ease;
+		display: inline-block;
+	}
+
+	a:hover {
+		background-color: #555;
+	}
+</style>
